@@ -1,0 +1,321 @@
+@import '~/stylesheets/common/_shared.scss';
+// @import '../node_modules/font-awesome/css/font-awesome.css';
+
+// #gmail {
+//   margin: -10px -100px -10px -10px;
+// }
+
+// .circular-menu {
+//   width: 700px;
+//   height: 700px;
+//   margin: 0 auto;
+//   position: relative;
+//   margin-top: 50px;
+// }
+// .close {
+//   display: none;
+// }
+// .circle {
+//   display: flex;
+//   width: 500px;
+//   height: 500px;
+//   opacity: 0;
+//   display: none;
+//   padding: -200px;
+  
+//   -webkit-transform: scale(0);
+//   -moz-transform: scale(0);
+//   transform: scale(0);
+
+//   -webkit-transition: all 0.4s ease-out;
+//   -moz-transition: all 0.4s ease-out;
+//   transition: all 0.4s ease-out;
+// }
+
+// a {
+//   padding: 40px 10px;
+// }
+
+// // .open.circle {
+// //   opacity: 1;
+// //   height: 700px;
+// //   width: 700px;
+
+// //   -webkit-transform: scale(1);
+// //   -moz-transform: scale(1);
+// //   transform: scale(1);
+// // }
+
+// .circle a {
+//   text-decoration: none;
+//   color: white;
+//   display: block;
+//   height: 500px;
+//   width: 500px;
+//   line-height: 40px;
+//   margin-left: -20px;
+//   margin-top: -20px;
+//   /* position: absolute; */
+//   text-align: center;
+
+// }
+
+// .circle a:hover {
+//   color: #eef;
+// }
+
+
+// button:focus {outline:0;}
+
+
+
+/*                                 ! Circle Nav With Pop Up Menu #1 Started Here ...
+=======================================================================================================================*/
+*,
+*:after,
+*:before,
+html
+	{box-sizing:border-box}
+
+body{
+	margin:0;
+	padding:0;
+	font-family:Tahoma, sans-serif;
+	font-style:normal;
+	font-weight:400;
+	text-align:center
+  }
+
+#navigation {
+  width: 100%;
+  height: 400px;
+}
+
+nav{
+	width:300px;
+	height:300px;
+	top:50%;
+	left:50%;
+	display:block;
+	position:absolute;
+	transform:translate(-50%,-50%);
+	animation:hide-show 2s ease
+	}
+
+@keyframes hide-show
+	{0%,99%{opacity:0}100%{opacity:1}}
+
+.btn-menu{
+	background:#000;
+	width:40px;
+	height:40px;
+	margin:130px auto;
+	z-index:999;
+	display:flex;
+	align-content:center;
+	justify-content:center;
+	position:relative;
+	cursor:pointer;
+	border-radius:50%
+	}
+
+[class*="icon_"]
+	{color:#fff;font-size:30px;font-weight:700}
+
+.icon_open{animation:rotate-scale .5s ease}
+.icon_close{display:none}
+
+@keyframes rotate-scale
+	{0%{transform:scale(0,0) rotate(0deg)}100%{transform:scale(1,1) rotate(360deg)}}
+
+.hide{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	top:0;
+	left:0;
+	display:block;
+	position:absolute
+	}
+
+li{
+	width:40px;
+	height:130px;
+	display:block;
+	position:absolute;
+	list-style-type:none;
+  transform-origin:bottom center;
+  background-color: black;
+}
+
+li:nth-child(1)
+	{top:0;left:130px;animation:hide_1 .2s 1.4s ease both}
+
+li:nth-child(2)
+	{top:7px;left:145px;animation:hide_2 .2s 1.2s ease both}
+
+li:nth-child(3)
+	{top:20px;left:150px;animation:hide_3 .2s 1s ease both}
+
+li:nth-child(4)
+	{top:34px;left:144px;animation:hide_4 .2s .8s ease both}
+
+li:nth-child(5)
+	{top:40px;left:130px;animation:hide_5 .2s .6s ease both}
+
+li:nth-child(6)
+	{top:34px;left:116px;animation:hide_6 .2s .4s ease both}
+
+li:nth-child(7)
+	{top:20px;left:110px;animation:hide_7 .2s .2s ease both}
+
+li:nth-child(8)
+	{top:7px;left:115px;animation:hide_8 .2s ease both}
+
+@keyframes hide_1
+	{0%{transform:rotate(0deg) scale(1,1)}100%{transform:rotate(0deg) scale(0,0)}}
+
+@keyframes hide_2
+	{0%{transform:rotate(45deg) scale(1,1)}100%{transform:rotate(45deg) scale(0,0)}}
+
+@keyframes hide_3
+	{0%{transform:rotate(90deg) scale(1,1)}100%{transform:rotate(90deg) scale(0,0)}}
+
+@keyframes hide_4
+	{0%{transform:rotate(135deg) scale(1,1)}100%{transform:rotate(135deg) scale(0,0)}}
+
+@keyframes hide_5
+	{0%{transform:rotate(180deg) scale(1,1)}100%{transform:rotate(180deg) scale(0,0)}}
+
+@keyframes hide_6
+	{0%{transform:rotate(225deg) scale(1,1)}100%{transform:rotate(225deg) scale(0,0)}}
+
+@keyframes hide_7
+	{0%{transform:rotate(270deg) scale(1,1)}100%{transform:rotate(270deg) scale(0,0)}}
+
+@keyframes hide_8
+	{0%{transform:rotate(315deg) scale(1,1)}100%{transform:rotate(315deg) scale(0,0)}}
+
+li a{
+	width:100%;
+	height:40px;
+	top:0;
+	left:0;
+	display:block;
+	position:absolute;
+	border-radius:50%;
+	outline-width:none;
+	text-decoration:none
+	}
+
+li:nth-child(1) a{background:url('https://image.flaticon.com/icons/svg/185/185981.svg')}
+li:nth-child(2) a{background:url('https://image.flaticon.com/icons/svg/185/185961.svg')}
+li:nth-child(3) a{background:url('https://image.flaticon.com/icons/svg/185/185985.svg')}
+li:nth-child(4) a{background:url('https://image.flaticon.com/icons/svg/185/185983.svg')}
+li:nth-child(5) a{background:url('https://image.flaticon.com/icons/svg/185/185963.svg')}
+li:nth-child(6) a{background:url('https://image.flaticon.com/icons/svg/185/185964.svg')}
+li:nth-child(7) a{background:url('https://image.flaticon.com/icons/svg/185/185971.svg')}
+li:nth-child(8) a{background:url('https://image.flaticon.com/icons/svg/185/185988.svg')}
+
+.title{
+	background:#000;
+	width:80px;
+	padding:8px 0;
+	top:32px;
+	left:50%;
+	z-index:-1;
+	display:block;
+	position:absolute;
+	font-size:14px;
+	color:#fff;
+	opacity:0;
+	border-radius:4px;
+	visibility:hidden;
+	transition:all .5s ease
+	}
+
+li:nth-child(1) a .title,
+li:nth-child(2) a .title,
+li:nth-child(3) a .title,
+li:nth-child(4) a .title
+	{transform:translate(-50%,0) rotate(270deg)}
+
+li:nth-child(5) a .title,
+li:nth-child(6) a .title,
+li:nth-child(7) a .title,
+li:nth-child(8) a .title
+	{transform:translate(-50%,0) rotate(90deg)}
+
+.title:before{
+	content:"";
+	width:10px;
+	height:10px;
+	top:50%;
+	display:block;
+	position:absolute;
+	transform:translate(0,-50%);
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent
+	}
+
+li:nth-child(1) a .title:before,
+li:nth-child(2) a .title:before,
+li:nth-child(3) a .title:before,
+li:nth-child(4) a .title:before
+	{right:-8px;border-left:10px solid #000}
+
+li:nth-child(5) a .title:before,
+li:nth-child(6) a .title:before,
+li:nth-child(7) a .title:before,
+li:nth-child(8) a .title:before
+	{left:-8px;border-right:10px solid #000}
+
+li a:hover{box-shadow:0 0 2px 2px #fff,0 0 4px 2px #000}
+
+li a:hover .title
+	{top:72px;opacity:1;visibility:visible}
+
+/*
+When the "Button Nav" clicked,
+"icon_open" & "icon_close" will be replaced with "i_open" & "i_close".
+"hide" will be replaced with "show".
+*/	
+
+.i_open{display:none}
+.i_close{display:inline;animation:rotate-scale .5s ease}
+
+.show li:nth-child(1){animation:show_1 .2s ease both}
+.show li:nth-child(2){animation:show_2 .2s .2s ease both}
+.show li:nth-child(3){animation:show_3 .2s .4s ease both}
+.show li:nth-child(4){animation:show_4 .2s .6s ease both}
+.show li:nth-child(5){animation:show_5 .2s .8s ease both}
+.show li:nth-child(6){animation:show_6 .2s 1s ease both}
+.show li:nth-child(7){animation:show_7 .2s 1.2s ease both}
+.show li:nth-child(8){animation:show_8 .2s 1.4s ease both}
+
+@keyframes show_1
+	{0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(0deg) scale(1,1)}}
+
+@keyframes show_2
+	{0%{transform:rotate(45deg) scale(0,0)}100%{transform:rotate(45deg) scale(1,1)}}
+
+@keyframes show_3
+	{0%{transform:rotate(90deg) scale(0,0)}100%{transform:rotate(90deg) scale(1,1)}}
+
+@keyframes show_4
+	{0%{transform:rotate(135deg) scale(0,0)}100%{transform:rotate(135deg) scale(1,1)}}
+
+@keyframes show_5
+	{0%{transform:rotate(180deg) scale(0,0)}100%{transform:rotate(180deg) scale(1,1)}}
+
+@keyframes show_6
+	{0%{transform:rotate(225deg) scale(0,0)}100%{transform:rotate(225deg) scale(1,1)}}
+
+@keyframes show_7
+	{0%{transform:rotate(270deg) scale(0,0)}100%{transform:rotate(270deg) scale(1,1)}}
+
+@keyframes show_8
+	{0%{transform:rotate(315deg) scale(0,0)}100%{transform:rotate(315deg) scale(1,1)}}
+/*                                 ! Circle Nav With Pop Up Menu #1 Ended Here ...
+=======================================================================================================================*/

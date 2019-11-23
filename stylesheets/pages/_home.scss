@@ -1,0 +1,32 @@
+.home {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    // display: inline-flex;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+  
+    .card {
+      display: inline-block;
+      width: 100vw;
+      height: 600px;
+    }
+
+    .card .about {
+        position: relative;
+        align-items: flex-start;
+        justify-items: flex-start;
+        p {
+            word-break: break-word;
+            white-space: normal;
+        }
+    }
+
+    .card .resume {
+        position: relative;
+        align-items: flex-start;
+        justify-items: flex-start;
+    }
+}

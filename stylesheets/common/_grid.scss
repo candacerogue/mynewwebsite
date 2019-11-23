@@ -1,0 +1,59 @@
+@import '~bourbon-neat/core/_neat';
+
+$candace-mq-default-breakpoint: '(max-width: 374.9999999999px)';
+$candace-mq-mobile-breakpoint: '(min-width: 375px)';
+$candace-mq-tablet-breakpoint: '(min-width: 768px)';
+$candace-mq-desktop-breakpoint: '(min-width: 1024px)';
+$candace-mq-large-display-breakpoint: '(min-width: 1920px)';
+
+$candace-mq-types: (
+  default: 'screen and #{$candace-mq-default-breakpoint}',
+  mobile: 'screen and #{$candace-mq-mobile-breakpoint}',
+  tablet: 'screen and #{$candace-mq-tablet-breakpoint}',
+  desktop: 'screen and #{$candace-mq-desktop-breakpoint}',
+  large-display: 'screen and #{$candace-mq-large-display-breakpoint}'
+);
+
+$candace-grid-default-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($candace-mq-types, default)
+  }
+);
+
+$candace-grid-mobile-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($candace-mq-types, mobile)
+  }
+);
+
+$candace-grid-tablet-configuration: (
+  columns: 8,
+  gutter: 1.5rem,
+  media: #{
+    map-get($candace-mq-types, tablet)
+  }
+);
+
+$candace-grid-desktop-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($candace-mq-types, desktop)
+  }
+);
+
+$candace-grid-large-display-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($candace-mq-types, large-display)
+  }
+);
+
+.grid-container {
+  @include grid-container();
+}

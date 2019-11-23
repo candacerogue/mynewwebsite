@@ -1,0 +1,47 @@
+{
+  "author": "Candace Rogue <candacerogue.com>",
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@nuxtjs/axios": "^5.4.1",
+    "bourbon-neat": "^3.0.1",
+    "consola": "^2.5.6",
+    "koa": "^2.7.0",
+    "lodash": "^4.17.11",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.6.3",
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-mq": "^1.0.1",
+    "vue-radial-menu": "^1.1.1"
+  },
+  "description": "The Candace Rogue web experience.",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.10",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.vue --fix --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "precommit:fix": "npm run lint:fix",
+    "start": "cross-env NODE_ENV=production node server/index.js"
+  },
+  "version": "0.0.0"
+}

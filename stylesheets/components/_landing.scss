@@ -1,0 +1,153 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    &__logo{
+        background-image: url('~assets/bitmoji.png'); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 300px; 
+        display: flex;
+        margin-top: 200px; 
+
+        @include grid-media($candace-grid-desktop-configuration) {     
+            height: 350px;
+            width: 400px; 
+            top: 10px;
+        }
+
+        // “I do not create. God creates. I assemble, and I steal from everywhere to do it” — George Balanchine
+    }
+    &__menu-button {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        text-decoration: none;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        z-index: 999;
+    
+        @include grid-media($candace-grid-desktop-configuration) {
+            top: 50px;     
+            left: 0px;
+        }
+    
+    }
+
+    &__nav {
+        width: 200px;
+        height: 200px;
+        top: 35%;
+        left: 15%;
+        position: relative;
+
+        @include grid-media($candace-grid-desktop-configuration) {     
+            width: 400px;
+            height: 400px; 
+            top: -260px;
+            left: 0%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        &__menu-items {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            font-family: 'East Sea Dokdo', cursive;
+            font-size: 16px;
+            color:#000073;
+
+            :hover {
+                text-shadow: 1px 1px 6px #44F09E;
+            }
+
+            @include grid-media($candace-grid-desktop-configuration) {     
+                width: 400px;
+                height: 400px; 
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+#bar1, #bar2, #bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000073;
+    margin: 6px 0;
+    transition: 0.7s;
+  }
+  #change-bar1 {
+    width: 35px;
+    height: 5px;
+    background-color: #000073;
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px,6px);
+  }
+
+  #change-bar2 {opacity: 0;}
+
+  #change-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000073;
+    -webkit-transform: rotate(45deg) translate(3px, 3px);
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.right {
+    top: -15%;
+    left: 110%;
+    position: absolute;
+}
+
+.left li:nth-child(1){animation:left_1 .2s ease both}
+.left li:nth-child(2){animation:left_2 .2s .2s ease both}
+.left li:nth-child(3){animation:left_3 .2s .4s ease both}
+.left li:nth-child(4){animation:left_4 .2s .6s ease both}
+.right li:nth-child(1){animation:right_1 .2s .8s ease both}
+.right li:nth-child(2){animation:right_2 .2s 1s ease both}
+.right li:nth-child(3){animation:right_3 .2s 1.2s ease both}
+.right li:nth-child(4){animation:right_4 .2s 1.4s ease both}
+
+@keyframes left_1
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(9deg) translate(0,-40%) scale(1.3,1.3)}}
+
+@keyframes left_2
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(-3deg) translate(0,-40%) scale(1.3,1.3)}}
+
+@keyframes left_3
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(-15deg) translate(-18%,0) scale(1.3,1.3)}}
+
+@keyframes left_4
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(-27deg) translate(-10%,0) scale(1.3,1.3)}}
+
+@keyframes right_1
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(-9deg) translate(0,-50%) scale(1.3,1.3)}}
+
+@keyframes right_2
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(6deg) translate(1%,225%) scale(1.3,1.3)}}
+
+@keyframes right_3
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(15deg) translate(6%,450%) scale(1.3,1.3)}}
+
+@keyframes right_4
+    {0%{transform:rotate(0deg) scale(0,0)}100%{transform:rotate(27deg) translate(14%,700%) scale(1.3,1.3)}}
+
+  // Colors: Deep Blue #000073 Teal #44F09E

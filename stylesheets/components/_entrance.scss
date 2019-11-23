@@ -1,0 +1,25 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    &__logo{
+        background-image: url('~assets/curious.png'); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 250px;
+        width: 300px; 
+        display: flex;
+        margin-top: 250px;
+
+        @include grid-media($candace-grid-desktop-configuration) {     
+            height: 350px;
+            width: 400px; 
+        }
+    
+    }
+}

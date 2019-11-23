@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+@import 'normalize.css/normalize.css';
+
+@import '~/stylesheets/common/_root.scss';
+@import '~/stylesheets/common/_grid.scss';
+@import '~/stylesheets/common/_mixins.scss';
+@import '~/stylesheets/common/_typography.scss';
+
+
+body {
+    background-image: url('~assets/website-background.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    width: 0;
+    height: 0;
+    color: #000073;
+
+    :hover {
+        text-shadow: 1px 1px 6px #44F09E;
+    }
+}

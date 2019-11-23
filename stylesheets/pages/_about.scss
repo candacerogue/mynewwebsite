@@ -1,0 +1,60 @@
+@import '~/stylesheets/common/_shared.scss';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    height: 600px;
+    padding-left: 50px;
+        @include grid-media($candace-grid-desktop-configuration) {
+            font-size: 12px;
+            line-height: 32px;
+        }
+
+    .unicorn {
+        transform: scale(1.5);
+        padding-top: 75px;
+        margin-left: 250px;
+    }
+
+    &__identities{
+        font-family: 'Oswald', sans-serif;
+        font-size: 32px;
+        color:#000073;
+        width: 365px;
+        @include grid-media($candace-grid-desktop-configuration) {
+            width: 500px;
+            position: absolute;
+            top: 10px;
+        }
+
+
+        #open {
+            display: inline-block;
+            margin: 0 15px 0 0;
+        }
+    }
+
+    .about-me {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 20px;
+        width: 365px;
+        @include grid-media($candace-grid-desktop-configuration) {
+            width: 500px;
+        }
+
+    }
+
+    #special {
+        font-size: 12px;
+        @include grid-media($candace-grid-desktop-configuration) {
+            font-size: 16px;
+        }
+    }
+}
