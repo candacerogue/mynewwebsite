@@ -9,7 +9,7 @@
     "koa": "^2.7.0",
     "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.6.3",
+    "nuxt": "^2.15.8",
     "nuxt-fontawesome": "^0.4.0",
     "vue-mq": "^1.0.1",
     "vue-radial-menu": "^1.1.1"
